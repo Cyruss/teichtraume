@@ -28,6 +28,17 @@
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .gallery img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
         footer {
             background-color: rgba(255, 255, 255, 0.8);
             padding: 10px;
@@ -44,10 +55,20 @@
     <section>
         <h2>Über uns</h2>
         <p>Willkommen bei Teichträume! Wir bieten hochwertiges Zubehör für Ihren Koiteich.</p>
+        <p><strong>Hinweis:</strong> Dies ist eine Übergangswebsite. Eine neue Version ist in Arbeit!</p>
     </section>
     <section>
         <h2>Unsere Produkte</h2>
         <p>Von Filtern über Futter bis hin zu Pumpen – alles für einen gesunden und schönen Koiteich.</p>
+    </section>
+    <section>
+        <h2>Bildergalerie</h2>
+        <div class="gallery">
+            <img src="image1.jpeg" alt="Filteranlage">
+            <img src="image2.jpeg" alt="Filterbürsten">
+            <img src="image3.jpeg" alt="Installation">
+            <img src="image4.jpeg" alt="Koi-Fütterung">
+        </div>
     </section>
     <footer>
         <p><a href="impressum.html">Impressum</a></p>
