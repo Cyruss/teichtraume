@@ -15,17 +15,19 @@
 <body class="bg-white text-gray-800 leading-relaxed">
 
   <!-- Hero -->
-  <header class="bg-gradient-to-b from-emerald-100 to-sky-100 py-12">
-    <div class="container mx-auto px-4 text-center">
-      <img src="logo.svg" alt="Teichträume Logo" class="w-28 md:w-36 mx-auto mb-4">
-      <h1 class="text-4xl md:text-5xl font-bold text-emerald-700 mb-2">Teichträume</h1>
-      <p class="text-lg md:text-xl text-emerald-800 mb-6">Ihr Spezialist für Koiteich‑Zubehör</p>
+  <header class="relative h-screen bg-cover bg-center" style="background-image: url('hero.jpeg');">
+    <div class="absolute inset-0 bg-emerald-900/40 backdrop-blur-sm"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+      <img src="logo.svg" alt="Teichträume Logo" class="w-32 md:w-40 mb-4 drop-shadow-lg">
+      <h1 class="text-4xl md:text-5xl font-bold text-white drop-shadow-md mb-2">Teichträume</h1>
+      <p class="text-lg md:text-xl text-sky-100 mb-6 drop-shadow-sm">Ihr Spezialist für Koiteich‑Zubehör</p>
       <a href="#about" class="bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-3 px-6 rounded-full transition">
         Mehr erfahren
       </a>
     </div>
   </header>
 
+  <!-- Inhalt -->
   <main class="container mx-auto py-16 space-y-20 px-4">
 
     <!-- Über uns -->
