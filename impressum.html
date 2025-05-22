@@ -1,73 +1,33 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Impressum - Teichträume</title>
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      background: #f7f7f7;
-      font-family: 'Inter', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      text-align: center;
-      color: #222;
-    }
-    .wrapper {
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 4px 20px 0 rgba(0,0,0,0.08);
-      max-width: 460px;
-      margin: 48px auto 0 auto;
-      padding: 30px 22px 22px 22px;
-      text-align: left;
-    }
-    h1 {
-      color: #ff5349;
-      font-size: 2rem;
-      margin-bottom: 22px;
-      text-align: center;
-    }
-    p, a {
-      font-size: 1.07rem;
-      margin: 0 0 9px 0;
-      color: #333;
-    }
-    a {
-      color: #009ee2;
-      text-decoration: none;
-      border-bottom: 1px dotted #009ee2;
-    }
-    a:hover {
-      color: #ff5349;
-    }
-    .back-link {
-      display: block;
-      text-align: center;
-      margin-top: 28px;
-    }
-    @media (max-width: 500px) {
-      .wrapper {
-        margin: 28px 4vw 0 4vw;
-        padding: 18px 7vw 16px 7vw;
+    @layer base {
+      body {
+        font-family: 'Inter', sans-serif;
       }
     }
   </style>
 </head>
-<body>
-  <div class="wrapper">
-    <h1>Impressum</h1>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
+    <h1 class="text-center text-3xl font-semibold text-orange-600 mb-6">Impressum</h1>
     <p><strong>Teichträume</strong></p>
     <p>Tim Afflerbach</p>
     <p>An der Wurzel 9</p>
     <p>52393 Hürtgenwald</p>
-    <p>Email: <a href="mailto:info@teichtraeume.de">info@teichtraeume.de</a></p>
+    <p>Email: <a href="mailto:info@teichtraeume.de" class="text-orange-600 underline">info@teichtraeume.de</a></p>
     <p>Umsatzsteuer-ID: DE365824682</p>
     <p>Steuernummer: 207/5001/4461</p>
     <p>Amtsgericht: Düren</p>
-    <a class="back-link" href="index.html">Zurück zur Startseite</a>
+    <div class="mt-6 text-center">
+      <a href="index.html" class="text-gray-600 hover:text-orange-600 underline">Zurück zur Startseite</a>
+    </div>
   </div>
 </body>
 </html>
