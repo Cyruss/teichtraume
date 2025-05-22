@@ -1,77 +1,74 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teichträume - Koiteich Zubehör</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f0f0f0;
-            background-image: url('background.jpg');
-            background-size: cover;
-        }
-        header {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-        }
-        header img {
-            width: 150px;
-        }
-        section {
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-        .gallery img {
-            width: 300px;
-            height: auto;
-            border-radius: 10px;
-        }
-        footer {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px;
-            font-size: 14px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teichträume - Koiteich Zubehör</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @layer base {
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <img src="logo.svg" alt="Teichträume Logo">
-        <h1>Teichträume</h1>
-        <p>Ihr Spezialist für Koiteich-Zubehör</p>
-    </header>
-    <section>
-        <h2>Über uns</h2>
-        <p>Willkommen bei Teichträume! Wir bieten hochwertiges Zubehör für Ihren Koiteich.</p>
-        <p><strong>Hinweis:</strong> Dies ist eine Übergangswebsite. Eine neue Version ist in Arbeit!</p>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-white py-8 shadow-md">
+    <div class="container mx-auto flex flex-col items-center">
+      <img src="logo.svg" alt="Teichträume Logo" class="w-32 mb-4" />
+      <h1 class="text-4xl font-semibold text-orange-600 mb-2">Teichträume</h1>
+      <p class="text-lg text-gray-600">Ihr Spezialist für Koiteich-Zubehör</p>
+    </div>
+  </header>
+
+  <main class="container mx-auto py-12 space-y-12">
+    <section id="about" class="bg-white rounded-lg shadow-lg p-8">
+      <h2 class="text-2xl font-semibold mb-4">Über uns</h2>
+      <p class="text-gray-700 mb-4">Willkommen bei Teichträume! Wir bieten hochwertiges Zubehör für Ihren Koiteich.</p>
+      <p class="text-orange-600 font-semibold">Hinweis: Dies ist eine Übergangswebsite. Eine neue Version ist in Arbeit!</p>
     </section>
-    <section>
-        <h2>Unsere Produkte</h2>
-        <p>Von Filtern über Futter bis hin zu Pumpen – alles für einen gesunden und schönen Koiteich.</p>
+
+    <section id="products" class="bg-white rounded-lg shadow-lg p-8">
+      <h2 class="text-2xl font-semibold mb-4">Unsere Produkte</h2>
+      <p class="text-gray-700">Von Filtern über Futter bis hin zu Pumpen – alles für einen gesunden und schönen Koiteich.</p>
     </section>
-    <section>
-        <h2>Bildergalerie</h2>
-        <div class="gallery">
-            <img src="image1.jpeg" alt="Filteranlage">
-            <img src="image2.jpeg" alt="Filterbürsten">
-            <img src="image3.jpeg" alt="Installation">
-            <img src="image4.jpeg" alt="Koi-Fütterung">
+
+    <section id="gallery" class="bg-white rounded-lg shadow-lg p-8">
+      <h2 class="text-2xl font-semibold mb-6">Galerie</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="overflow-hidden rounded-lg shadow-md hover:scale-105 transform transition">
+          <img src="image1.jpeg" alt="Filteranlage" class="w-full h-48 object-cover">
+          <div class="p-4"><p class="text-gray-700">Trommelfilter für Koiteiche</p></div>
         </div>
+        <div class="overflow-hidden rounded-lg shadow-md hover:scale-105 transform transition">
+          <img src="image2.jpeg" alt="Filterbürsten" class="w-full h-48 object-cover">
+          <div class="p-4"><p class="text-gray-700">Filtermaterial: Hochwertige Bürsten</p></div>
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-md hover:scale-105 transform transition">
+          <img src="image3.jpeg" alt="Installation" class="w-full h-48 object-cover">
+          <div class="p-4"><p class="text-gray-700">Individuelle Teichfilter-Installation</p></div>
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-md hover:scale-105 transform transition">
+          <img src="image4.jpeg" alt="Koi-Fütterung" class="w-full h-48 object-cover">
+          <div class="p-4"><p class="text-gray-700">Unsere Kunden und ihre Kois</p></div>
+        </div>
+      </div>
     </section>
-    <footer>
-        <p><a href="impressum.html">Impressum</a></p>
-    </footer>
+
+    <section id="contact" class="bg-white rounded-lg shadow-lg p-8 text-center">
+      <h2 class="text-2xl font-semibold mb-4">Kontakt</h2>
+      <p class="text-gray-700">Schreib uns gerne:<br />
+        <a href="mailto:info@teichtraeume.de" class="text-orange-600 font-semibold underline">info@teichtraeume.de</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="bg-white py-6 shadow-inner">
+    <div class="container mx-auto text-center">
+      <a href="impressum.html" class="text-gray-600 hover:text-orange-600 underline">Impressum</a>
+    </div>
+  </footer>
 </body>
 </html>
