@@ -1,36 +1,148 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Impressum - Teichträume</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum – Teichträume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    .impressum-page {
+      min-height: 100vh;
+      padding: 120px 0 80px;
+      background: var(--color-light);
+    }
+    .impressum-card {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      padding: 48px;
+      max-width: 640px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-border);
+    }
+    .impressum-card h1 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--color-dark);
+      margin-bottom: 8px;
+    }
+    .impressum-divider {
+      width: 50px;
+      height: 3px;
+      background: var(--color-primary);
+      border-radius: 2px;
+      margin-bottom: 32px;
+    }
+    .impressum-card h2 {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    .impressum-card p {
+      font-size: 0.95rem;
+      color: var(--color-text);
+      line-height: 1.7;
+    }
+    .impressum-card a {
+      color: var(--color-primary);
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    .impressum-card a:hover {
+      color: var(--color-primary-dark);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      margin-bottom: 24px;
+      transition: var(--transition);
+    }
+    .back-link:hover {
+      color: var(--color-primary-dark);
+      gap: 10px;
+    }
+    @media (max-width: 768px) {
+      .impressum-card {
+        padding: 32px 24px;
+      }
+      .impressum-page {
+        padding: 96px 0 60px;
+      }
     }
   </style>
 </head>
-<body class="bg-emerald-50 text-gray-800 flex items-center justify-center min-h-screen px-4">
+<body>
 
-  <div class="bg-white shadow-xl rounded-xl max-w-md w-full p-8">
-    <h1 class="text-3xl font-bold text-emerald-700 text-center mb-6">Impressum</h1>
-
-    <p class="mb-2"><strong>Teichträume</strong></p>
-    <p class="mb-2">Tim Afflerbach</p>
-    <p class="mb-2">An der Wurzel 9</p>
-    <p class="mb-2">52393 Hürtgenwald</p>
-
-    <p class="mb-2">Email: <a href="mailto:info@teichtraeume.de" class="text-emerald-600 hover:underline">info@teichtraeume.de</a></p>
-    <p class="mb-2">Umsatzsteuer-ID: DE365824682</p>
-    <p class="mb-2">Steuernummer: 207/5001/4461</p>
-    <p class="mb-2">Amtsgericht: Düren</p>
-
-    <div class="text-center mt-6">
-      <a href="index.html" class="text-sky-600 hover:text-sky-800 underline">Zurück zur Startseite</a>
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.svg" alt="Teichträume Logo" width="50" height="50">
+        <span class="nav-logo-text">Teichträume</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Startseite</a></li>
+      </ul>
     </div>
-  </div>
+  </nav>
+
+  <main class="impressum-page">
+    <div class="container">
+      <div class="impressum-card">
+        <a href="index.html" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Zurück zur Startseite
+        </a>
+        <h1>Impressum</h1>
+        <div class="impressum-divider"></div>
+
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <p>Teichträume<br>Tim Afflerbach</p>
+
+        <h2>Adresse</h2>
+        <p>An der Wurzel 9<br>52393 Hürtgenwald</p>
+
+        <h2>Kontakt</h2>
+        <p>E-Mail: <a href="mailto:info@teichtraeume.de">info@teichtraeume.de</a></p>
+
+        <h2>Umsatzsteuer-Identifikationsnummer</h2>
+        <p>DE365824682</p>
+
+        <h2>Steuernummer</h2>
+        <p>207/5001/4461</p>
+
+        <h2>Registergericht</h2>
+        <p>Amtsgericht Düren</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="logo.svg" alt="Teichträume Logo" width="40" height="40">
+        <span>Teichträume</span>
+      </div>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="mailto:info@teichtraeume.de">Kontakt</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Teichträume. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
