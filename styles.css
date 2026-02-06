@@ -259,8 +259,8 @@ a {
 }
 
 .hero-logo {
-  width: 280px;
-  height: 280px;
+  width: 400px;
+  height: 400px;
   margin: 0 auto 40px;
   filter: brightness(0) invert(1);
   animation: fadeInUp 0.8s ease-out;
@@ -1011,8 +1011,8 @@ body.lightbox-open {
   }
 
   .hero-logo {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
   }
 }
 
