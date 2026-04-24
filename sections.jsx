@@ -98,12 +98,12 @@ function Nav() {
           <a href="#hero" style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <div
               style={{
-                padding: scrolled ? "0" : "0",
-                background: scrolled ? "rgba(243,239,230,0.6)" : "rgba(243,239,230,0.92)",
+                padding: 0,
+                background: scrolled ? "transparent" : "rgba(243,239,230,0.92)",
                 backdropFilter: scrolled ? "none" : "blur(6px)",
                 WebkitBackdropFilter: scrolled ? "none" : "blur(6px)",
                 borderRadius: 4,
-                transition: "background .4s, padding .4s",
+                transition: "background .4s",
                 lineHeight: 0,
                 overflow: "hidden",
               }}
@@ -111,7 +111,7 @@ function Nav() {
               <img
                 src={LOGO_SRC}
                 alt="Teichträume"
-                style={{ height: scrolled ? 54 : 52, width: "auto", display: "block", transition: "height .4s" }}
+                style={{ height: scrolled ? 60 : 64, width: "auto", display: "block", transition: "height .4s" }}
               />
             </div>
           </a>
