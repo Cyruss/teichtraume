@@ -65,7 +65,6 @@ function App() {
       <Services />
       <Zubehoer />
       <Gallery />
-      <Instagram />
       <Contact />
       <Footer />
 

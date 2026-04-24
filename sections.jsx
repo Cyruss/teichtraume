@@ -77,7 +77,6 @@ function Nav() {
     ["Leistungen", "#services"],
     ["Zubehör", "#zubehoer"],
     ["Projekte", "#gallery"],
-    ["Journal", "#instagram"],
     ["Kontakt", "#contact"],
   ];
   return (
@@ -122,6 +121,29 @@ function Nav() {
               </a>
             ))}
             <a
+              href="https://instagram.com/teichtraeume"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram @teichtraeume"
+              className="mono"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                padding: "10px 14px",
+                border: "1px solid currentColor",
+                borderRadius: 999,
+                letterSpacing: "0.12em",
+              }}
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+              @teichtraeume
+            </a>
+            <a
               href="#contact"
               className="mono"
               style={{
@@ -154,6 +176,7 @@ function Nav() {
           <a key={h} href={h} onClick={() => setMenuOpen(false)}>{t}</a>
         ))}
         <div style={{ marginTop: 40, display: "grid", gap: 10 }}>
+          <a href="https://instagram.com/teichtraeume" target="_blank" rel="noopener" className="mono" style={{ fontSize: 13 }}>Instagram · @teichtraeume</a>
           <a href="mailto:info@teichtraeume.de" className="mono" style={{ fontSize: 13 }}>info@teichtraeume.de</a>
           <a href="https://wa.me/4917621925412" className="mono" style={{ fontSize: 13 }}>+49 176 21925412</a>
           <a href="impressum.html" className="mono" style={{ fontSize: 13 }}>Impressum</a>
@@ -659,42 +682,6 @@ function Gallery() {
 }
 
 // --- INSTAGRAM -------------------------------------------------------------
-function Instagram() {
-  const posts = [
-    { t: "Fütterung",   img: "assets/image4.jpeg" },
-    { t: "Filterbau",   img: "assets/image1.jpeg" },
-    { t: "Filterbürsten", img: "assets/image2.jpeg" },
-    { t: "Wartung",     img: "assets/image3.jpeg" },
-    { t: "Koiteich",    img: "assets/hero.jpeg" },
-  ];
-  return (
-    <section id="instagram" data-screen-label="06 Journal" style={{ padding: "120px 32px 100px", background: "var(--paper)" }}>
-      <div style={{ maxWidth: 1440, margin: "0 auto" }}>
-        <SectionLabel num="06 — Journal">Instagram · @teichtraeume</SectionLabel>
-
-        <div style={{ marginTop: 60, display: "grid", gridTemplateColumns: "auto 1fr auto", gap: 40, alignItems: "end" }}>
-          <h2 className="serif" style={{ fontSize: "clamp(40px, 4.6vw, 64px)", lineHeight: 1, fontWeight: 300 }}>
-            <em>Zwischendurch</em>, aus Hürtgenwald.
-          </h2>
-          <div />
-          <a href="https://instagram.com/teichtraeume" className="mono" style={{ padding: "12px 18px", border: "1px solid currentColor", borderRadius: 999 }}>@teichtraeume ↗</a>
-        </div>
-
-        <div style={{ marginTop: 48, display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 12 }}>
-          {posts.map((p, i) => (
-            <a key={i} href="https://instagram.com/teichtraeume" style={{ display: "block", aspectRatio: "1/1", overflow: "hidden", position: "relative", background: "#ddd" }}>
-              <img src={p.img} alt={p.t} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "transform .6s" }}
-                onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.06)"}
-                onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}/>
-              <div style={{ position: "absolute", left: 10, bottom: 10 }} className="mono">· {p.t}</div>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 // --- CONTACT ---------------------------------------------------------------
 function Contact() {
   return (
@@ -983,6 +970,6 @@ function Footer() {
 }
 
 Object.assign(window, {
-  Nav, Hero, Marquee, About, Services, Zubehoer, Gallery, Instagram, Contact, Footer,
+  Nav, Hero, Marquee, About, Services, Zubehoer, Gallery, Contact, Footer,
   KoiSilhouette, useReveal,
 });
