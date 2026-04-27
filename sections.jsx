@@ -93,7 +93,7 @@ function Nav() {
           borderBottom: scrolled ? "1px solid rgba(13,13,13,0.08)" : "1px solid transparent",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", maxWidth: 1600, margin: "0 auto" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%" }}>
           <a href="#hero" style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <div
               style={{
