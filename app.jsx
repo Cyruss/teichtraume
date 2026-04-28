@@ -1,7 +1,7 @@
 // App shell for Teichträume
 
 const HERO_IMAGES = {
-  koi:     "assets/hero.jpeg",
+  koi:     "assets/hero-whatsapp.jpeg",
   feeding: "assets/image4.jpeg",
   filter:  "assets/image1.jpeg",
   surface: "https://images.unsplash.com/photo-1533422902779-aff35862e462?w=2400&q=80",

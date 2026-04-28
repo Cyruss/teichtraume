@@ -221,7 +221,7 @@ function Hero({ heroImage, showKoi = true }) {
       {/* Big title */}
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "0 32px 80px" }}>
         <div style={{ maxWidth: 1600, margin: "0 auto" }}>
-          <div className="mono" style={{ opacity: 0.85, marginBottom: 36 }}>— Spezialisiert auf Koi</div>
+          <div className="mono" style={{ opacity: 0.85, marginBottom: 36 }}>— Teichträume · Hürtgenwald</div>
           <h1 className="serif" style={{
             fontSize: "clamp(72px, 11.5vw, 192px)",
             lineHeight: 0.88,
@@ -229,12 +229,12 @@ function Hero({ heroImage, showKoi = true }) {
             letterSpacing: "-0.035em",
             textWrap: "balance",
           }}>
-            Teiche mit<br />
-            <em style={{ fontStyle: "italic", fontWeight: 300 }}>Charakter</em>.
+            Spezialisiert<br />
+            <em style={{ fontStyle: "italic", fontWeight: 300 }}>auf Koi</em>.
           </h1>
           <div style={{ marginTop: 48, display: "grid", gridTemplateColumns: "1fr auto 1fr", gap: 40, alignItems: "end" }}>
             <p style={{ maxWidth: 420, fontSize: 17, lineHeight: 1.5, opacity: 0.92 }}>
-              Seit 2022 planen, bauen und pflegen wir Koiteiche, die mehr sind
+              Seit 2022 planen und pflegen wir Koiteiche, die mehr sind
               als Wasserbecken — lebende Landschaften, maßgeschneidert für
               Ihre Fische und Ihren Garten.
             </p>
@@ -305,7 +305,7 @@ function SwimmingKoi() {
 
 // --- MARQUEE ---------------------------------------------------------------
 function Marquee() {
-  const items = ["Planung", "Bau", "Filtertechnik", "Pflege", "Beratung", "Winterfest", "Koi-Gesundheit", "Teichbau"];
+  const items = ["Planung", "Pflege", "Filtertechnik", "Beratung", "Winterfest", "Wasserwerte", "Belüftung", "Zubehör"];
   const row = [...items, ...items, ...items];
   return (
     <div style={{ borderTop: "1px solid rgba(13,13,13,0.15)", borderBottom: "1px solid rgba(13,13,13,0.15)", padding: "22px 0", overflow: "hidden", background: "var(--bg)" }}>
@@ -349,8 +349,8 @@ function About() {
           </div>
           <div className="reveal d2" style={{ position: "relative" }}>
             <div style={{ position: "relative", aspectRatio: "3/4", overflow: "hidden", background: "#111" }}>
-              <img src="assets/image4.jpeg"
-                   alt="Koi" style={{ width: "100%", height: "100%", objectFit: "cover" }}/>
+              <img src="assets/feeding-whatsapp.jpeg"
+                   alt="Koi werden von Hand gefüttert" style={{ width: "100%", height: "100%", objectFit: "cover" }}/>
             </div>
             <div className="mono" style={{ marginTop: 16, display: "flex", justifyContent: "space-between", color: "var(--ink-3)" }}>
               <span>Fig. 01 — Fütterung von Hand</span>
@@ -391,18 +391,10 @@ function Services() {
     },
     {
       num: "II",
-      title: "Bau",
-      kicker: "Teichbau & Technik",
-      body: "Aushub, Folie, Bodenabläufe, Filterkammern, Skimmer, Belüftung, UV. Bauzeit in der Regel 2–6 Wochen — abhängig von Größe, Boden und Technikpaket.",
-      points: ["Aushub & Rohbau", "Filter & Pumpentechnik", "Bepflanzung & Randgestaltung"],
-      img: "assets/image1.jpeg",
-    },
-    {
-      num: "III",
       title: "Pflege",
-      kicker: "Wartung & Koi-Gesundheit",
-      body: "Monatliche, quartalsweise oder saisonale Betreuung. Wasserwerte, Filtermedien, Winterfestmachen, Koi-Check. Auch als Service für Bestandsteiche.",
-      points: ["Wasserwerte & Protokoll", "Filterreinigung", "Koi-Gesundheitscheck"],
+      kicker: "Wartung & Bestandsteiche",
+      body: "Monatliche, quartalsweise oder saisonale Betreuung. Wasserwerte, Filtermedien und Winterfestmachen. Auch als Service für Bestandsteiche.",
+      points: ["Wasserwerte & Protokoll", "Filterreinigung", "Saisonale Betreuung"],
       img: "assets/image3.jpeg",
     },
   ];
@@ -410,7 +402,7 @@ function Services() {
   return (
     <section id="services" data-screen-label="03 Leistungen" style={{ padding: "140px 32px 120px", background: "var(--paper)", color: "var(--ink)" }}>
       <div style={{ maxWidth: 1440, margin: "0 auto" }}>
-        <SectionLabel num="03 — Leistungen">Planung, Bau, Pflege</SectionLabel>
+        <SectionLabel num="03 — Leistungen">Planung & Pflege</SectionLabel>
 
         <div style={{ marginTop: 80, display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: 80, alignItems: "start" }}>
           <div>
@@ -463,7 +455,7 @@ function Services() {
                   }}/>
               ))}
               <div style={{ position: "absolute", left: 24, bottom: 24, right: 24, color: "var(--bg)" }}>
-                <div className="mono" style={{ opacity: 0.8 }}>0{active + 1} / 03</div>
+                <div className="mono" style={{ opacity: 0.8 }}>{String(active + 1).padStart(2, "0")} / {String(services.length).padStart(2, "0")}</div>
                 <div className="serif" style={{ fontSize: 40, fontWeight: 300, marginTop: 6 }}>{services[active].title}</div>
               </div>
             </div>
@@ -582,12 +574,12 @@ function ZubehoerGlyph({ kind }) {
 
 function Zubehoer() {
   const items = [
-    { t: "Filtertechnik",     c: "Trommelfilter · Biokammern · UV-C",         k: "filter" },
-    { t: "Pumpen",            c: "Energiesparend · Frostgeschützt",            k: "pump" },
-    { t: "Belüftung",         c: "Membrankompressoren · Ausströmer",           k: "aer" },
+    { t: "Filtertechnik",     c: "Trommelfilter · Biokammern · UV-C",         k: "filter", img: "assets/filter-whatsapp.jpeg" },
+    { t: "Pumpen",            c: "Energiesparend · Frostgeschützt",            k: "pump", img: "assets/pump-whatsapp.jpeg" },
+    { t: "Belüftung",         c: "Membrankompressoren · Ausströmer",           k: "aer", img: "assets/aeration-whatsapp.jpeg" },
     { t: "Wasseraufbereitung",c: "Mineralien · Bakterien · Teststreifen",      k: "water" },
-    { t: "Futter",            c: "Saison- & Aufzuchtfutter",                   k: "food" },
-    { t: "Werkzeug & Kescher",c: "Koi-gerecht, schonend",                      k: "tools" },
+    { t: "Futter",            c: "Saison- & Aufzuchtfutter",                   k: "food", img: "assets/feeding-whatsapp.jpeg" },
+    { t: "Werkzeug & Kescher",c: "Koi-gerecht, schonend",                      k: "tools", img: "assets/tools-whatsapp.jpeg" },
   ];
   return (
     <section id="zubehoer" data-screen-label="04 Zubehör" style={{ padding: "140px 32px 120px", background: "var(--bg)" }}>
@@ -614,7 +606,11 @@ function Zubehoer() {
               </div>
               <div style={{ flex: 1, aspectRatio: "4/3", overflow: "hidden", background: "var(--paper)", border: "1px solid rgba(13,13,13,0.1)", display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}>
                 <div className="zubehoer-img" style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", transition: "transform .6s" }}>
-                  <ZubehoerGlyph kind={it.k} />
+                  {it.img ? (
+                    <img src={it.img} alt={it.t} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  ) : (
+                    <ZubehoerGlyph kind={it.k} />
+                  )}
                 </div>
               </div>
               <div>
@@ -633,11 +629,12 @@ function Zubehoer() {
 // --- GALLERY ---------------------------------------------------------------
 function Gallery() {
   const shots = [
-    { cap: "Koiteich Hürtgenwald", meta: "Hauptanlage", img: "assets/hero.jpeg", big: true },
-    { cap: "Filterkammer", meta: "Eigenbau, Edelstahl", img: "assets/image1.jpeg" },
-    { cap: "Filterbürsten", meta: "Mechanische Stufe", img: "assets/image2.jpeg" },
-    { cap: "Fütterung", meta: "Handzahme Koi", img: "assets/image4.jpeg", big: true },
-    { cap: "Wartung Technikschacht", meta: "Winter 2025", img: "assets/image3.jpeg" },
+    { cap: "Koi im Teich", meta: "Hero-Motiv", img: "assets/hero-whatsapp.jpeg", big: true },
+    { cap: "Filtertechnik", meta: "Filterbox mit Bürsten", img: "assets/filter-whatsapp.jpeg" },
+    { cap: "Pumpe", meta: "Oase AquaMax Eco", img: "assets/pump-whatsapp.jpeg" },
+    { cap: "Fütterung von Hand", meta: "Handzahme Koi", img: "assets/feeding-whatsapp.jpeg", big: true },
+    { cap: "Belüftung", meta: "FujiMAC Air Pump", img: "assets/aeration-whatsapp.jpeg" },
+    { cap: "Werkzeug & Kescher", meta: "Koi Net Maker", img: "assets/tools-whatsapp.jpeg" },
   ];
   return (
     <section id="gallery" data-screen-label="05 Projekte" style={{ padding: "140px 32px 120px", background: "#0d0d0d", color: "var(--bg)" }}>
